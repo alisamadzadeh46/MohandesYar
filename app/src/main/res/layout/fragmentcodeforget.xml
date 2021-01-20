@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    >
+
+    <data>
+
+        <variable
+            name="data"
+            type="com.example.mohandesipezeshki.viewmodel.ViewModelCheckCodeFotget" />
+    </data>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="15dp"
+        android:background="#fff"
+        android:layoutDirection="rtl">
+
+        <TextView
+            android:id="@+id/showtext"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="20dp"
+            android:fontFamily="@font/amim"
+            android:textAlignment="center" />
+
+        <EditText
+            android:id="@+id/textView2"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_marginStart="15dp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="206dp"
+            android:layout_marginEnd="15dp"
+            android:layout_marginRight="15dp"
+            android:background="@drawable/backgroundedit"
+            android:fontFamily="@font/amim"
+            android:hint="@string/sendcode"
+            android:inputType="number"
+            android:maxLength="5"
+            android:padding="15dp"
+            android:text="@={data.code}"
+            android:textAlignment="center"
+            android:textColor="@color/blue_color"
+            android:textColorHint="@color/blue_color"
+            android:autofillHints="" />
+
+        <Button
+            android:id="@+id/button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/textView2"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:layout_margin="22dp"
+            android:background="@drawable/backgroundbutton"
+            android:fontFamily="@font/amim"
+            android:onClick="@{data.CheckCode}"
+            android:text="@string/enter"
+            android:textColor="#fff"
+            android:textSize="20sp" />
+
+
+    </RelativeLayout>
+
+</layout>

@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto" android:id="@+id/navigation"
+    app:startDestination="@id/fragmentRegister">
+
+    <fragment
+        android:id="@+id/fragmentRegister"
+        android:name="com.example.mohandesipezeshki.view.fragment.FragmentRegister"
+        android:label="FragmentRegister" >
+        <action
+            android:id="@+id/action_fragmentRegister_to_fragmentCode"
+            app:destination="@id/fragmentCode" />
+        <action
+            android:id="@+id/action_fragmentRegister_to_fragmentLogin"
+            app:destination="@id/fragmentLogin" />
+        <action
+            android:id="@+id/action_fragmentRegister_to_fragmentProfile"
+            app:destination="@id/fragmentProfile" />
+        <action
+            android:id="@+id/action_fragmentRegister_to_fragmentForgotPassword"
+            app:destination="@id/fragmentForgotPassword" />
+        <action
+            android:id="@+id/action_fragmentRegister_to_fragmentProfile2"
+            app:destination="@id/fragmentProfile" />
+    </fragment>
+    <fragment
+        android:id="@+id/fragmentCode"
+        android:name="com.example.mohandesipezeshki.view.fragment.FragmentCode"
+        android:label="FragmentCode" >
+        <action
+            android:id="@+id/action_fragmentCode_to_fragmentProfile"
+            app:destination="@id/fragmentProfile" />
+    </fragment>
+    <fragment
+        android:id="@+id/fragmentLogin"
+        android:name="com.example.mohandesipezeshki.view.fragment.FragmentLogin"
+        android:label="FragmentLogin" >
+        <action
+            android:id="@+id/action_fragmentLogin_to_fragmentRegister"
+            app:destination="@id/fragmentRegister" />
+        <action
+            android:id="@+id/action_fragmentLogin_to_fragmentForgotPassword"
+            app:destination="@id/fragmentForgotPassword" />
+        <action
+            android:id="@+id/action_fragmentLogin_to_fragmentProfile"
+            app:destination="@id/fragmentProfile" />
+    </fragment>
+    <fragment
+        android:id="@+id/fragmentProfile"
+        android:name="com.example.mohandesipezeshki.view.fragment.FragmentProfile"
+        android:label="FragmentProfile" >
+        <action
+            android:id="@+id/action_fragmentProfile_to_fragmentDaftarche"
+            app:destination="@id/fragmentDaftarche" />
+        <action
+            android:id="@+id/action_fragmentProfile_to_fragmentViewProfile"
+            app:destination="@id/fragmentViewProfile" />
+        <action
+            android:id="@+id/action_fragmentProfile_to_fragmentAbout"
+            app:destination="@id/fragmentAbout" />
+    </fragment>
+    <fragment
+        android:id="@+id/fragmentForgotPassword"
+        android:name="com.example.mohandesipezeshki.view.fragment.FragmentForgotPassword"
+        android:label="FragmentForgotPassword" >
+        <action
+            android:id="@+id/action_fragmentForgotPassword_to_fragmentCodeForgot"
+            app:destination="@id/fragmentCodeForgot" />
+        <action
+            android:id="@+id/action_fragmentForgotPassword_to_fragmentRegister"
+            app:destination="@id/fragmentRegister" />
+        <action
+            android:id="@+id/action_fragmentForgotPassword_to_fragmentLogin"
+            app:destination="@id/fragmentLogin" />
+    </fragment>
+    <fragment
+        android:id="@+id/fragmentCodeForgot"
+        android:name="com.example.mohandesipezeshki.view.fragment.FragmentCodeForgot"
+        android:label="FragmentCodeForgot" >
+        <action
+            android:id="@+id/action_fragmentCodeForgot_to_fragmentChangePassword"
+            app:destination="@id/fragmentChangePassword" />
+    </fragment>
+    <fragment
+        android:id="@+id/fragmentChangePassword"
+        android:name="com.example.mohandesipezeshki.view.fragment.FragmentChangePassword"
+        android:label="FragmentChangePassword" >
+        <action
+            android:id="@+id/action_fragmentChangePassword_to_fragmentProfile"
+            app:destination="@id/fragmentProfile" />
+    </fragment>
+    <fragment
+        android:id="@+id/fragmentDaftarche"
+        android:name="com.example.mohandesipezeshki.view.fragment.FragmentDaftarche"
+        android:label="FragmentDaftarche" >
+        <action
+            android:id="@+id/action_fragmentDaftarche_to_fragmentEmployee"
+            app:destination="@id/fragmentEmployee" />
+    </fragment>
+    <fragment
+        android:id="@+id/fragmentEmployee"
+        android:name="com.example.mohandesipezeshki.view.fragment.FragmentEmployee"
+        android:label="FragmentEmployee" >
+        <action
+            android:id="@+id/action_fragmentEmployee_to_fragmentDetailEmployee"
+            app:destination="@id/fragmentDetailEmployee" />
+    </fragment>
+    <fragment
+        android:id="@+id/fragmentDetailEmployee"
+        android:name="com.example.mohandesipezeshki.view.fragment.FragmentDetailEmployee"
+        android:label="FragmentDetailEmployee" />
+    <fragment
+        android:id="@+id/fragmentViewProfile"
+        android:name="com.example.mohandesipezeshki.view.fragment.FragmentViewProfile"
+        android:label="FragmentViewProfile" >
+        <action
+            android:id="@+id/action_fragmentViewProfile_to_fragmentProfile"
+            app:destination="@id/fragmentProfile" />
+    </fragment>
+    <fragment
+        android:id="@+id/fragmentAbout"
+        android:name="com.example.mohandesipezeshki.view.fragment.FragmentAbout"
+        android:label="FragmentAbout" >
+        <action
+            android:id="@+id/action_fragmentAbout_to_fragmentProfile"
+            app:destination="@id/fragmentProfile" />
+    </fragment>
+</navigation>

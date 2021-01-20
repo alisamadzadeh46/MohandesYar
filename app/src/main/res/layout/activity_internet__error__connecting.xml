@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layoutDirection="rtl"
+    android:layout_height="match_parent"
+    android:background="@drawable/backgroundgradiant"
+    tools:context=".view.activity.Internet_Error_Connecting">
+    <ImageView
+        android:id="@+id/Im_connect"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="200dp"
+        android:layout_centerHorizontal="true"
+        android:src="@drawable/chekinternet"/>
+
+    <TextView
+        android:id="@+id/Tv_connnect"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="20sp"
+        android:padding="10dp"
+        android:fontFamily="@font/amim"
+        android:textAlignment="center"
+        android:textColor="#fff"
+        android:textStyle="bold"
+        android:layout_below="@+id/Im_connect"
+        android:text="@string/nointernet" />
+
+    <Button
+        android:layout_width="250dp"
+        android:fontFamily="@font/amim"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/Tv_connnect"
+        android:textAlignment="center"
+        android:text="@string/talash"
+        android:textSize="20sp"
+        android:id="@+id/enter"
+        android:background="@drawable/talash"
+        android:textColor="#FFD800"
+        android:layout_marginTop="10dp"
+        android:layout_centerHorizontal="true"
+        />
+
+    <io.github.yuweiguocn.lib.squareloading.SquareLoading
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/loading"
+        android:layout_below="@+id/enter"
+        android:layout_centerVertical="true"
+        android:visibility="gone"
+        android:layout_marginRight="5dp"
+        app:squareColor="#757575" />
+</RelativeLayout>

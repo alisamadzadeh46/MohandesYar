@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+    <data>
+        <variable
+            name="data"
+            type="com.example.mohandesipezeshki.viewmodel.ViewModelLogin" />
+    </data>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layoutDirection="ltr">
+
+        <EditText
+            android:id="@+id/phone"
+            android:fontFamily="@font/amim"
+            android:textAlignment="center"
+            android:inputType="number"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:textColor="@color/blue_color"
+            android:layout_marginRight="15dp"
+            android:layout_marginStart="15dp"
+            android:layout_marginEnd="15dp"
+            android:text="@={data.phone}"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="206dp"
+            android:hint="@string/PhoneNumber"
+            android:textColorHint="@color/blue_color"
+            android:padding="15dp"
+            android:background="@drawable/backgroundedit"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:ignore="TextFields"
+            android:autofillHints="" />
+
+        <EditText
+            android:id="@+id/textView3"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:textAlignment="center"
+            android:layout_marginTop="42dp"
+            android:fontFamily="@font/amim"
+            android:layout_marginRight="15dp"
+            android:layout_below="@+id/phone"
+            android:inputType="textPassword"
+            android:layout_marginStart="15dp"
+            android:layout_marginEnd="15dp"
+            android:text="@={data.password}"
+            android:layout_marginLeft="15dp"
+            android:background="@drawable/backgroundedit"
+            android:hint="@string/Password"
+            android:textColor="@color/blue_color"
+            android:textColorHint="@color/blue_color"
+            android:padding="15dp"
+            android:autofillHints="" />
+        <Button
+            android:id="@+id/button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="@{data.Enter}"
+            android:text="@string/enter"
+            android:layout_centerHorizontal="true"
+            android:layout_margin="20dp"
+            android:textStyle="bold"
+            android:fontFamily="@font/amim"
+            android:textSize="30sp"
+            android:layout_below="@+id/textView3"
+            android:textColor="#FFF"
+            android:background="@drawable/backgroundbutton" />
+
+        <TextView
+            android:id="@+id/textView5"
+            android:fontFamily="@font/amim"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="36dp"
+            android:onClick="@{data.ForgetPassword}"
+            android:text="@string/ForgetPassword"
+            android:textSize="22sp"
+            android:padding="5sp"
+            android:layout_marginEnd="10dp"
+            android:layout_below="@+id/button"
+            android:layout_alignParentStart="true"
+            android:textColor="@android:color/darker_gray" />
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="match_parent"
+            android:fontFamily="@font/amim"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="64dp"
+            android:layout_marginEnd="16dp"
+            android:text="@string/enter"
+            android:textColor="@color/blue_color"
+            android:textSize="30sp" />
+
+        <TextView
+            android:id="@+id/textView6"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="68dp"
+            android:layout_toEndOf="@+id/textView7"
+            android:layout_marginBottom="28dp"
+            android:layout_alignParentEnd="true"
+            android:textColor="@android:color/darker_gray"
+            android:text="@string/notaccount"
+            android:fontFamily="@font/amim"
+            android:layout_alignParentBottom="true"/>
+
+        <TextView
+            android:id="@+id/textView7"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_marginStart="80dp"
+            android:layout_marginBottom="28dp"
+            android:fontFamily="@font/amim"
+            android:onClick="@{data.IntentEnter}"
+            android:text="@string/RegisterText"
+            android:textColor="@color/blue_color" />
+
+
+    </RelativeLayout>
+</layout>
